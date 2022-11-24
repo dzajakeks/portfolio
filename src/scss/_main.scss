@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main {
+    background: linear-gradient(-135deg, #08415C, black);
+    position: relative;
+    z-index: 999;    
+    opacity: 1;
+    animation: popMainTrans .7s linear forwards;
+    transition: all .7s linear;
+}
+@keyframes popMainTrans {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.delayDiv {
+    transition: all .7s linear;
+}
+
+
+.blackMain {
+    opacity: 0;
+    transition: all .7s linear ;
+    margin: 0;
+    height: 50vh;
+    overflow: hidden;
+}
+.blackMainTwo {
+    opacity: 1;
+    height: 100%;
+    overflow: auto;
+    transition: all 1s linear ;
+}
+

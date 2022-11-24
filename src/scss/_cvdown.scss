@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.cv__container {
+    color: white;
+    position: relative;
+}
+
+.cv__container-intro-text {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: .5em;
+    padding-bottom: 1em;
+    font-family: 'Cousine', monospace;
+    color: white;
+}
+.cv__text {
+    text-align: center;
+    padding:0 .2em 7em .2em;
+    font-size: 1.5rem;
+}
+
+.cv__down-link {
+    text-decoration: none;
+    color: #3a80cc;
+    font-size: 2.4rem;
+}

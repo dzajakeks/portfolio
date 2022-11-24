@@ -1,0 +1,47 @@
+.nav__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to right, #08415C, #000000);
+    transform: translateX(100%);
+    transition: all 1.2s ease;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    height: 100vh;
+    // z-index: 99999;
+}
+.nav__text {
+    font-size: 3rem;
+    margin-bottom: 1em;
+    color: #3997d6;
+}
+.nav__container-list {
+
+    li {
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.8rem;
+            transition: 300ms all ease;
+        }
+        a:hover {
+            color: #26adec;
+        }
+    }
+    li + li {
+        margin-top: 2em;
+    }
+}
+
+.shownNav {
+    transform: translateX(0%);
+    z-index: 200000;
+
+    // transition: all 1.2s ease;
+    // height: 100vh;
+}

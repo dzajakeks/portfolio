@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Cousine', monospace;
+}
+
+body {
+    position: relative;
+    background-color: black;
+}
+
+.header {
+    color: white;
+    min-height: 50vh;
+    display: grid;
+    place-content: center;
+    background: linear-gradient(to bottom, #08415C, #000000, #000000);
+}
+.main__switch {
+    width: 35px;
+    height: 50px;
+    background-color: white;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    margin: 1em auto 0 auto;
+    box-shadow: inset 1px 0px gray;
+}
+.main__switch__container {
+    border: 1px solid rgb(189, 189, 189);
+    width: 15px;
+    height: 30px;
+    position: relative;
+    transform: rotate(180deg);
+}
+.main__switch--top {
+    height: 15px;
+    border: 1px solid rgb(189, 189, 189);
+    background-color: #08415C;
+    width: 100%;
+    display: inline-block;
+}
+.slide {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+.header--explore {
+    font-size: 1.4rem;
+    color: #3997d6;
+    text-align: center;
+}
+.header--title {
+    font-size: 3.2rem;
+    text-align: center;
+    position: relative;
+    animation: headerSlideIn 1.5s ease;
+}
+
+@keyframes headerSlideIn {
+    0% {
+        right: 120%;
+        opacity: 0;
+    }
+    70% {
+        right: -7%;
+    }
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+.header--self--typing {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.6rem;
+    position: relative;
+    width: fit-content;
+    margin: .5em auto 0 auto;
+
+}
+.header--self--typing::before,
+.header--self--typing::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.header--self--typing::before {
+    background-color: black;
+    animation: selfTyping 3s 2s steps(13) forwards;
+}
+.header--self--typing::after {
+    content: '';
+    width: 3px;
+    background-color: white;
+    animation: selfTyping 3s 2s steps(13) forwards,
+    selfTypingBlink 900ms steps(13) infinite ;
+}
+@keyframes selfTyping {
+    100% {
+        left: 100%;
+    }
+}
+@keyframes selfTypingBlink {
+    100% {
+        background: transparent;
+    }
+}
+.explore__container {
+    display: grid;
+    place-content: center;
+    margin-top: 2em;
+    // display: none;
+    opacity: 0;
+    animation: popUpExplore 2s ease 6s forwards ;
+}
+@keyframes popUpExplore {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        display: inline-block;
+    }
+}
+
+.burger__button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border: 3px solid white;    
+    z-index: 99999;
+
+}
+.burger__button-stripe {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    z-index: 9999999;
+
+}
+
+.burger__button-stripe::before,
+.burger__button-stripe::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    z-index: 99999;
+
+}
+
+.burger__button-stripe::before {
+    transform: translateY(-12px);
+        z-index: 9999999;
+
+}
+.burger__button-stripe::after {
+    transform: translateY(12px);
+        z-index: 9999999;
+
+}
+.open .burger__button-stripe {
+    transform: translateX(-30px);
+    background: transparent;
+    z-index: 9999999;
+
+}
+.open .burger__button-stripe::before {
+    transform: rotate(45deg) translate(21px, -21px);
+    z-index: 9999999;
+} 
+.open .burger__button-stripe::after {
+    transform: rotate(-45deg) translate(21px, 21px);
+    z-index: 9999999;
+}
+
+.hidden__nav {
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+    .header--title {
+        font-size: 2.5rem;
+        text-align: center;
+        position: relative;
+        animation: headerSlideIn 1.5s ease;
+    }
+}

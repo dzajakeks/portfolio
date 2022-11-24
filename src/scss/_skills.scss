@@ -1,0 +1,148 @@
+$container-height: 400px;
+$box-width: 350px;
+
+.skills {
+    padding-top: 10em;
+}
+.skills__introText {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: .5em;
+    padding-bottom: 1em;
+    font-family: 'Cousine', monospace;
+    color: white;
+}
+.skills__container {
+    max-width: 1800px;
+    height: $container-height;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.skills__row {
+    border: 1px solid rgba(255, 255, 255, .2);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+
+}
+.skills--skill {
+    border: 1px solid #2f72bc;
+    background: linear-gradient(to left, #08415C, #00010c);
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    margin: 25px 0;
+}
+.allskill {
+    position: absolute;
+    width: $box-width;
+}
+.skills__row:hover { 
+
+    .allskill{
+        animation-play-state: paused;
+
+    }
+}
+.oneskill {
+    animation: move 16s linear infinite;
+    position: absolute;
+    left: -$box-width;
+}
+.twoskill {
+    animation: move 16s linear 3.2s infinite;
+    position: absolute;
+    left: -$box-width;
+}
+.threeskill {
+    animation: move 16s linear 6.4s infinite;
+    position: absolute;
+    left: -$box-width;
+}
+.fourskill {
+    animation: move 16s linear 9.6s infinite;
+    position: absolute;
+    left: -$box-width;
+}
+.fiveskill {
+    animation: move 16s linear 12.8s infinite;
+    position: absolute;
+    left: -$box-width;
+}
+.sixskill {
+    animation: move 16s linear infinite reverse;
+    position: absolute;
+    left: -$box-width;
+}
+.sevenskill {
+    animation: move 16s linear 3.2s infinite reverse;
+    position: absolute;
+    left: -$box-width;
+}
+.eightskill {
+    animation: move 16s linear 6.4s infinite reverse;
+    position: absolute;
+    left: -$box-width;
+}
+.nineskill {
+    animation: move 16s linear 9.6s infinite reverse;
+    position: absolute;
+    left: -$box-width;
+}
+.tenskill {
+    animation: move 16s linear 12.8s infinite reverse;
+    position: absolute;
+    left: -$box-width;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(calc(1800px + #{$box-width}));
+    }
+  }
+
+.icon svg {
+    font-size: 3rem;
+    margin-right: 10px;
+}
+.html-icon {
+    fill: #f25320;
+}
+.css-icon {
+    fill: #2091eb;
+}
+.sass-icon {
+    fill: #c26191;
+}
+.bem-icon {
+    font-size: 1.8rem;
+    margin-right: 10px;
+
+}
+.npm-icon {
+    fill: #c13534;
+}
+.redux-icon {
+    fill: #7046b2;
+}
+.js-icon {
+    fill: #f2d400;
+}
+.react-icon {
+    fill: #5ccfee;
+}
+.ts-icon {
+    fill: #2f72bc;
+}
+.git-icon {
+    fill: #e44c30;
+}
+.still-learning {
+    color: red;
+}
