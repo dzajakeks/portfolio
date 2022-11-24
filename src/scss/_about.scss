@@ -37,10 +37,21 @@ img {
     margin: 0 auto;
     max-width: 350px;
     position: relative;
-    padding: 0 3.2em;
+    // padding: 0 3.2em;
 }
 .markoimg {
     cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .about__wrapper-img {
+        max-width: 270px;
+    }
+}
+@media (max-width: 700px) {
+    .about__wrapper-img {
+        max-width: 155px;
+    }
 }
 .secret-message {
     position: absolute;
