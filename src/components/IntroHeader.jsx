@@ -1,10 +1,9 @@
-import React, { useState, useRef, Fragment} from 'react';
+import React, { useState, useRef, Fragment, useEffect} from 'react';
 import Navigation from './Navigation';
 
 const IntroHeader = ({blackRef}) => {
   const openNavRef = useRef();
-  const navRef = useRef();
-
+  const switchRef = useRef();
 
   let [openMenu, setOpenMenu] = useState(false);
 
@@ -12,6 +11,9 @@ const IntroHeader = ({blackRef}) => {
   const burgerRef = useRef();
   const ref = useRef();
   
+
+
+
   const switchHandler = e => {
     ref.current.classList.toggle('slide');
     if(ref.current.classList.contains('slide')) {
@@ -52,7 +54,7 @@ const IntroHeader = ({blackRef}) => {
         <div id='switchh' className='explore__container'>
         <p className='header--explore'>Let's Explore
         <br />Flip The Switch To Begin</p>
-        <button onClick={switchHandler} className='main__switch'>
+        <button onClick={switchHandler} ref={switchRef} className='main__switch hidden-switch'>
           <div className='main__switch__container'>
             <span ref={ref} className='main__switch--top buttons slide'></span>
             <span className='main__switch--bottom  buttons'></span>

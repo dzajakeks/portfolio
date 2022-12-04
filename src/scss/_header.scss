@@ -30,7 +30,27 @@ body {
     cursor: pointer;
     margin: 1em auto 0 auto;
     box-shadow: inset 1px 0px gray;
+    animation: returnSwitch 1s linear 6s forwards;
 }
+.hidden-switch {
+    transform: translateY(-800%);
+}
+
+@keyframes returnSwitch {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: .2;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .main__switch__container {
     border: 1px solid rgb(189, 189, 189);
     width: 15px;

@@ -6,7 +6,7 @@
     right: 0;
     background: linear-gradient(to right, #08415C, #000000);
     transform: translateX(100%);
-    transition: all 1.2s ease;
+    transition: all 1s ease;
     display: grid;
     place-content: center;
     text-align: center;
@@ -41,7 +41,4 @@
 .shownNav {
     transform: translateX(0%);
     z-index: 200000;
-
-    // transition: all 1.2s ease;
-    // height: 100vh;
 }
